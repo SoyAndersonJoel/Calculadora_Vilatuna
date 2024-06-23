@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="calculadora">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="363" height="412"/>
+    </constraints>
+    <properties>
+      <background color="-1184257"/>
+      <foreground color="-1184257"/>
+      <inheritsPopupMenu value="false"/>
+      <name value=""/>
+      <opaque value="true"/>
+      <visible value="true"/>
+    </properties>
+    <border type="etched">
+      <size top="0" left="0" bottom="0" right="0"/>
+    </border>
+    <children/>
+  </grid>
+</form>
