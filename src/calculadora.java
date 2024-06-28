@@ -173,7 +173,76 @@ public class calculadora {
                 textoTF.setText("");
             }
         });
-        
+        // ActionListener para el botón de raíz cuadrada
+        raiz.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operador = "√";
+                textoTF.setText("");
+            }
+        });
+
+        // ActionListener para el botón de potencia
+        potencia.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num1 = Double.parseDouble(textoTF.getText());
+                operador = "^";
+                textoTF.setText("");
+            }
+        });
+
+        // ActionListener para el botón de igual
+        igual.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                switch (operador) {
+                    case "+":
+                        num2 = Double.parseDouble(textoTF.getText());
+                        textoTF.setText(df.format(num1 + num2));
+                        break;
+                    case "-":
+                        num2 = Double.parseDouble(textoTF.getText());
+                        textoTF.setText(df.format(num1 - num2));
+                        break;
+                    case "*":
+                        num2 = Double.parseDouble(textoTF.getText());
+                        textoTF.setText(df.format(num1 * num2));
+                        break;
+                    case "/":
+                        num2 = Double.parseDouble(textoTF.getText());
+                        if (num2 != 0) {
+                            textoTF.setText(df.format(num1 / num2));
+                        } else {
+                            textoTF.setText("Error");
+                        }
+                        break;
+                    case "^":
+                        num2 = Double.parseDouble(textoTF.getText());
+                        textoTF.setText(df.format(Math.pow(num1, num2)));
+                        break;
+                    case "sen":
+                        num1 = Double.parseDouble(textoTF.getText());
+                        textoTF.setText(df.format(Math.sin(Math.toRadians(num1))));
+                        break;
+                    case "cos":
+                        num1 = Double.parseDouble(textoTF.getText());
+                        textoTF.setText(df.format(Math.cos(Math.toRadians(num1))));
+                        break;
+                    case "tan":
+                        num1 = Double.parseDouble(textoTF.getText());
+                        textoTF.setText(df.format(Math.tan(Math.toRadians(num1))));
+                        break;
+                    case "√":
+                        num1 = Double.parseDouble(textoTF.getText());
+                        textoTF.setText(df.format(Math.sqrt(num1)));
+                        break;
+                }
+                nuevaOperacion = true;
+                operador = "";
+            }
+        });
+
 
 
     }
