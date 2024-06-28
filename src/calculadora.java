@@ -76,7 +76,60 @@ public class calculadora {
         siete.addActionListener(numberListener);
         ocho.addActionListener(numberListener);
         nueve.addActionListener(numberListener);
+        // ActionListener para el botón de punto decimal
+        punto.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (!textoTF.getText().contains(".")) {
+                    textoTF.setText(textoTF.getText() + ".");
+                }
+            }
+        });
+
+        // ActionListener para el botón de suma
+        suma.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num1 = Double.parseDouble(textoTF.getText());
+                operador = "+";
+                textoTF.setText("");
+            }
+        });
+
+        // ActionListener para el botón de resta
+        resta.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num1 = Double.parseDouble(textoTF.getText());
+                operador = "-";
+                textoTF.setText("");
+            }
+        });
+
+        // ActionListener para el botón de multiplicación
+        multiplicacion.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num1 = Double.parseDouble(textoTF.getText());
+                operador = "*";
+                textoTF.setText("");
+            }
+        });
+
+        // ActionListener para el botón de división
+        divicion.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num1 = Double.parseDouble(textoTF.getText());
+                operador = "/";
+                textoTF.setText("");
+            }
+        });
+
     }
+
+
+
 
 
 }
