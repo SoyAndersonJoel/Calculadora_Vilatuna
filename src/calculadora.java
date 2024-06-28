@@ -125,6 +125,56 @@ public class calculadora {
                 textoTF.setText("");
             }
         });
+        // ActionListener para el botón de resetear
+        resetear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textoTF.setText("");
+                num1 = 0;
+                num2 = 0;
+                operador = "";
+            }
+        });
+
+        // ActionListener para el botón de eliminar el último carácter
+        eliminar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String currentText = textoTF.getText();
+                if (currentText.length() > 0) {
+                    textoTF.setText(currentText.substring(0, currentText.length() - 1));
+                }
+            }
+        });
+
+        // ActionListener para el botón de seno
+        sen.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operador = "sen";
+                textoTF.setText("");
+            }
+        });
+
+        // ActionListener para el botón de coseno
+        cos.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operador = "cos";
+                textoTF.setText("");
+            }
+        });
+
+        // ActionListener para el botón de tangente
+        tan.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operador = "tan";
+                textoTF.setText("");
+            }
+        });
+        
+
 
     }
 
